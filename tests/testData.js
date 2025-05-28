@@ -1,5 +1,7 @@
 // testData.js
 export const credentials = {
-  email: "evjtest6@zentelai.com",
-  password: "Warranty@123"
+  adminemail: "jk@zentelai.com",
+  adminpassword: "ZentelAI@123",
+  useremail: "evjtest6@zentelai.com",
+  userpassword:"Warranty@123"
 };
