@@ -19,7 +19,7 @@ test('Admin uploads a document and customer sees it', async ({ browser }) => {
   await adminPage.waitForTimeout(3000);
   await adminPage.click("//span[text()='Bulk Upload']");
   await adminPage.waitForTimeout(3000);
-  await adminPage.setInputFiles("input[type='file']", 'C:/evj_automation_testing/omega_contracts_testdata for us.csv'); // make sure file exists
+  await adminPage.setInputFiles("input[type='file']", "tests/omega_contracts_testdata for us.csv"); // make sure file exists
   await adminPage.waitForTimeout(3000);
   await adminPage.click("//button[@type='submit']"); 
   await adminPage.waitForTimeout(3000);
