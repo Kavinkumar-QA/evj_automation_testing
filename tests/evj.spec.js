@@ -7,6 +7,7 @@ test('Admin uploads a document and customer sees it', async ({ browser }) => {
   // 1. Admin logs in and uploads a document
   const adminContext = await browser.newContext();
   const adminPage = await adminContext.newPage();
+  
 
   await adminPage.goto('https://admin.dev.mycoveragehub.com/'); // change to your actual URL
   await adminPage.fill("//input[@class='input c2053dbb5 c10f8401f']", credentials.adminemail); // change selector & email

@@ -1,4 +1,4 @@
-name: Playwright Tests
+name: evj_automation
 on:
   workflow_dispatch:
     branches: [ main, master ]
