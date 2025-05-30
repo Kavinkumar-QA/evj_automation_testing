@@ -91,6 +91,7 @@ for (let i = 1; i <= totalElements; i++) {
     await customerPage.waitForTimeout(3000);
     await customerPage.click("//button[@class='underline text-sm text-primary flex gap-2 link']");
     await customerPage.waitForTimeout(3000);
+
     // Verify Start Date
     const Startdate = await readAllDataFromCSV(csvFilePath);
     const csvStartdate = Startdate[0].start_date;
@@ -138,6 +139,31 @@ for (let i = 1; i <= totalElements; i++) {
     else {
     console.error(`❌ No match for Sale Date: ${planterm}`);
     }
+
+    // Verify billing method
+    const Billingmethod = await readAllDataFromCSV(csvFilePath);
+    const csvBillingmethod = Billingmethod[0].billing_method;
+    console.log("CSV Billing method:", csvBillingmethod); 
+    const billingmethod = await customerPage.textContent("(//td[@class='px-6 py-4'])[7]");
+    if (csvBillingmethod.includes(billingmethod)) { 
+    console.log(`✅ Match found: ${billingmethod}`);
+    }
+    else {
+    console.error(`❌ No match for Billing Method: ${billingmethod}`);
+    }
+
+    // Verify Street
+    const Street = await readAllDataFromCSV(csvFilePath);
+    const csvStreet = Street[0].street;
+    console.log("CSV Street:", csvStreet);
+    const street = await customerPage.textContent("(//td[@class='px-6 py-4'])[8]");
+    if (csvStreet.includes(street)) {
+    console.log(`✅ Match found: ${street}`);
+    }
+    else {
+    console.error(`❌ No match for Street: ${street}`);
+    }
+
 
     
 
