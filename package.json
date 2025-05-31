@@ -17,7 +17,8 @@
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.52.0",
-    "@types/node": "^22.15.23"
+    "@types/node": "^22.15.23",
+    "prettier": "^3.5.3"
   },
   "dependencies": {
     "csv-parser": "^3.2.0"
